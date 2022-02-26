@@ -1,11 +1,11 @@
 
 var app = {};                   //Información proporcionada por la api
-var temperature;    
-var count = 0;
+var temperature; 
+let ciudad
 
 function getCity() {
     /*Input de ciudad a buscar*/ 
-    let ciudad = document.getElementById("city").value;
+    ciudad = document.getElementById("city").value;
     console.log(ciudad);
 
     /*Consulta en la api */
@@ -14,3 +14,7 @@ function getCity() {
     app.cargaDatos();
 }
 
+
+function pulsar(e) {
+    if (e.keyCode === 13) getCity();
+}

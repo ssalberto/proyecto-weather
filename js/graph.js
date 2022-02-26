@@ -1,5 +1,4 @@
-
-var today = new Date();
+/*var today = new Date();
 time = Math.ceil(today.getTime()/1000) //segundos
 
 function timeToString(number) {
@@ -9,18 +8,13 @@ function timeToString(number) {
   h = Math.ceil((aux / 3600) % 24);
    
   return h + ':' + min + ':' + sec;
+}*/
 
-}
-
+/*Eje x*/
 var labels = [
-  0,
-  1,
-  2,
-  3,
-  4,
-  5,
 ];
 
+/* */
 var data = {
   labels: labels,
   datasets: [{
@@ -32,12 +26,13 @@ var data = {
   }]
 };
 
+/* */
 var config = {
   type: 'line',
   data: data, 
   options: {
-    color: 'white',//'#F1D00A',
-    scales: {
+    color: 'white',       //texto en tabla
+    scales: {             //configuración visual de tabla
       x: {
         grid: {
           color: 'white',
@@ -56,7 +51,8 @@ var config = {
   }
 };
 
-var graph = new Chart(
+/*creación de la gráfica*/
+var graph = new Chart(  
   document.getElementById('graph'),
   config
 );

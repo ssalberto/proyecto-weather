@@ -1,6 +1,7 @@
 html {
     margin: 0;
-    background-color: #000000d0;
+    background-color: #5969ad;/*#000000d0;*/
+    color: #F1D00A;
 }
 body{
     margin: 0;
@@ -10,7 +11,7 @@ header {
     display: flex;
     justify-content: space-between; 
     align-items: center;
-    background-color: #C2185B;
+    background-color: #3a2969;
     height: 40px;
     width: 100%;
     padding: 35px 15px;
@@ -34,23 +35,8 @@ input {
     background-color: rgb(255, 255, 255);
     border: 1px rgb(0, 0, 0);
     border-radius: 0;
-    -webkit-appearance: none;    
-}
-
-button{
-    text-decoration: none;
-    padding: 10px;
-    font-weight: 400;
-    font-size: 20px;
-    color: #ffffff;
-    background-color: #ac1551;
-    border-radius: 6px;
-    border: 0px ;
-}
-
-button:hover {
-    cursor: pointer;
-    background-color: #9c144a;
+    -webkit-appearance: none;   
+    border-radius: 6px; 
 }
 
 #temperature-box {
@@ -60,9 +46,20 @@ button:hover {
 
 }
 
+button{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #4698c2;
+    border-radius: 6px;
+    border: 0px ;
+  }
+
 #temperature {
     position: absolute;
-    color: #EC407A;
+    color: #F1D00A;
     font-family: roboto;
     font-size: 100px;
     margin: 0;

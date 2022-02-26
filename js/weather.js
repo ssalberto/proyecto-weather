@@ -1,4 +1,3 @@
-
 var units = 0;               //0->Celsius; 1->Kelvin; 2-> Farenheits
 var unitString = "ºC";  //String de unidades de temperatura
 
@@ -37,10 +36,16 @@ app.cargaDatos = () => {
         url: app.url,
         success: (data) => {
             app.datos = data;
-            temperature = app.datos.main.temp - 273.15;
-            graph.data.datasets[0].data.push(temperature.toFixed()-count);
-            if(graph.data.datasets[0].data.length == 7) {graph.data.datasets[0].data.shift()}
-            graph.update();
+            temperature = app.datos.main.temp - 273.15; //En ºC
+            unitString = "ºC"; units = 0;
+            
+            graph.data.labels.push(ciudad);
+            graph.data.datasets[0].data.push(temperature.toFixed());    //añade a la gráfica el valor
+            if(graph.data.datasets[0].data.length == 10) {
+                graph.data.labels.shift();
+                graph.data.datasets[0].data.shift();
+            }   //si gráfica completa, desplaza valores a la izquierda
+            graph.update(); //repinta gráfica
             printTemperature();
         },
         error: () => {
