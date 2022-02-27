@@ -32,6 +32,25 @@ function changeUnits() {
 
 /*Obtención de datos tiempo */
 app.cargaDatos = () => {
+
+    // fetch(app.url)
+    // .then(response => response.json())
+    // .then(json => {
+    //     app.datos = json;
+    //     temperature = app.datos.main.temp - 273.15;
+    //     unitString = "ºC"; units = 0;
+    
+    //     graph.data.labels.push(ciudad);
+    //     graph.data.datasets[0].data.push(temperature.toFixed());    //añade a la gráfica el valor
+    //     if(graph.data.datasets[0].data.length == 10) {
+    //         graph.data.labels.shift();
+    //         graph.data.datasets[0].data.shift();
+    //     }   //si gráfica completa, desplaza valores a la izquierda
+    //     graph.update(); //repinta gráfica
+    //     printTemperature();
+    // })
+    // .catch(alert("¡Ups! No puedo obtener información de la API"));
+
     $.ajax({
         url: app.url,
         success: (data) => {
