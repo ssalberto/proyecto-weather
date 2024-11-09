@@ -57,11 +57,12 @@ button:hover {
     display: flex;
     justify-content: center;
     padding-top: 5%;
+	height: 50px
 
 }
 
 #temperature {
-    position: absolute;
+    position: top;
     color: #EC407A;
     font-family: roboto;
     font-size: 100px;
@@ -70,14 +71,20 @@ button:hover {
 }
 
 .centered-box { 
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding-top: 200px;
-    
-}
+	display: flex; 
+	justify-content: center; 
+	align-items: top; 
+	padding: 50px;	
+	height: 100vh; 
+} 
 
-.graph-box {
-    width: 600px;
-    height: 100px;
+.graph-box { 
+	width: 50%; 
+	height: 50%; 
+	border: 1px solid black; 
+} 
+
+#graph { 
+	width: 100%; 
+	height: 100%;
 }
